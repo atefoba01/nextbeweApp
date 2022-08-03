@@ -35,6 +35,7 @@ body {
   background-image: url(images/slider/2637.png);
   background-color: #cccccc;
   height: 750px;
+  position: relative;
 }
 
 .custom ol {
@@ -95,10 +96,47 @@ body {
   width: 90%;
 }
 
+/* background-position: calc(100% - -145px) 0; */
+
+@media only screen and (max-width: 1200px) {
+  .bg {
+    background-position: calc(100% + 145px)
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .bg {
+    background-position: calc(100% + 190px)
+  }
+}
+
+@media only screen and (max-width: 815px) {
+  .bg {
+    background-position: calc(100% - 0px)
+  }
+}
+
+/* 1024 */
+
+@media only screen and (max-width: 425px) {
+  .bg {
+    background-position: calc(100% + 145px)
+  }
+}
+
 @media only screen and (max-width: 815px) {
   .right-img {
     width: 100%;
   }
+}
+
+.overlay {
+  position: absolute; /* Sit on top of the page content */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
 }
 
 .social-icon {
@@ -445,8 +483,8 @@ body {
   padding: 16px; /* Padding */
   position: fixed; /* Sit on top of the screen */
   z-index: 1; /* Add a z-index if needed */
-  right: 30px; /* Center the snackbar */
-  margin-left: 30px;
+  left: 30px; /* Center the snackbar */
+  margin-right: 30px;
   bottom: 30px; /* 30px from the bottom */
 }
 
