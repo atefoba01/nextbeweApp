@@ -82,13 +82,17 @@ class Accordion extends HTMLElement {
   connectedCallback() {
     toggleSwitch(this);
   }
+
+  attributeChangedCallback(prop, oldValue, newValue) {
+    toggleSwitch(this);
+  }
 }
 
 customElements.define("accordion-component", Accordion);
 
 function toggleSwitch(elem) {
   const shadow = elem.shadowRoot;
-  shadow.addEventListener("click", (_event) => {
+  shadow?.childNodes?.[5]?.addEventListener("click", (_event) => {
     shadow?.childNodes?.[5]?.classList?.toggle("is-active");
   });
 }
