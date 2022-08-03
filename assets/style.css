@@ -483,8 +483,8 @@ body {
   padding: 16px; /* Padding */
   position: fixed; /* Sit on top of the screen */
   z-index: 1; /* Add a z-index if needed */
-  left: 30px; /* Center the snackbar */
-  margin-right: 30px;
+  right: 30px; 
+  margin-left: 30px;
   bottom: 30px; /* 30px from the bottom */
 }
 
