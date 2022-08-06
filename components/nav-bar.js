@@ -182,7 +182,7 @@ class Narbar extends HTMLElement {
             </style>
             <div class="nav">
                 <nav class="nav--bar">
-                    <a href="#" class="search-mobile"><img src="assets/images/search.png" alt="LOGO"></a>
+                    <!-- <a href="#" class="search-mobile"><img src="assets/images/search.png" alt="LOGO"></a> -->
                     <div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="LOGO"></a></div>
                     <div class="menu">
                         <a href="index.html" class="${this.getAttribute('active') === 'home' ? 'active' : ''}">Home</a>
@@ -190,7 +190,7 @@ class Narbar extends HTMLElement {
                         <a href="career.html" class="${this.getAttribute('active') === 'career' ? 'active' : ''}">Careers</a>
                         <a href="faq.html" class="${this.getAttribute('active') === 'faq' ? 'active' : ''}">FAQs</a>
                         <a href="index.html#contact" class="button">Connect with US</a>
-                        <a href="#" class="search"><img src="assets/images/search.png" alt="LOGO"></a>
+                        <!-- <a href="#" class="search"><img src="assets/images/search.png" alt="LOGO"></a> -->
                     </div>
 
                     <div class="menu-toggle" id="mobile-menu">
