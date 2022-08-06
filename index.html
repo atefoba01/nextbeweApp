@@ -19,7 +19,7 @@
   </head>
 
   <body>
-     <div class="bg">
+    <!-- <div class="bg"> -->
       <div class="overlay">
         <nav-bar active="home"></nav-bar>
         <div class="jumbotron">
@@ -223,12 +223,12 @@
               We are Social
             </p>
             <div>
-              <a href="#"
+              <!-- <a href="#"
                 ><img
                   src="assets/images/instagram.png"
                   class="social-icon"
                   alt=""
-              /></a>
+              /></a> -->
 
               <a href="#">
                 <img
@@ -243,7 +243,9 @@
                   alt=""
                 />
               </a>
-              <a href="https://www.linkedin.com/company/nextbewe/" target="_blank"
+              <a
+                href="https://www.linkedin.com/company/nextbewe/"
+                target="_blank"
                 ><img
                   src="assets/images/linkedin.png"
                   class="social-icon"
@@ -285,7 +287,7 @@
                 <input required type="text" class="form-input" name="phone" />
               </div>
               <div class="form-control">
-                <input type="submit" class="btn" value="Submit" id="formSubmit"/>
+                <input type="submit" class="btn" value="Submit" />
               </div>
             </div>
           </div>
@@ -294,7 +296,6 @@
     </div>
 
     <div id="snackbar"></div>
-
 
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
     <script
@@ -307,32 +308,30 @@
     <script src="components/clients.js"></script>
     <script type="text/javascript">
       (function () {
-        emailjs.init("_rTjO_azkpxbNM5vI");
+        emailjs.init("YOUR_USER_ID");
       })();
 
       document
         .getElementById("myForm")
         .addEventListener("submit", function (event) {
           event.preventDefault();
-          document.getElementById("formSubmit").disabled = true;
-          document.getElementById("formSubmit").value = 'pending...';
           // send the email here
-          emailjs.sendForm("service_63vnsdh", "template_iktvgv8", this).then(
+          emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(
             (response) => {
-              document.getElementById("formSubmit").disabled = false;
-              document.getElementById("formSubmit").value = 'Submit';
               var x = document.getElementById("snackbar");
               x.className = "show sucess";
-              x.innerHTML = "Successfully submited";
-              setTimeout(function(){ x.className = x.className.replace("show sucess", ""); }, 3000);
+              x.innerHTML = response.text;
+              setTimeout(function () {
+                x.className = x.className.replace("show sucess", "");
+              }, 3000);
             },
             (error) => {
-               document.getElementById("formSubmit").disabled = false;
-              document.getElementById("formSubmit").value = 'Submit';
               var x = document.getElementById("snackbar");
               x.innerHTML = error.text;
               x.className = "show error";
-              setTimeout(function(){ x.className = x.className.replace("show error", ""); }, 3000);
+              setTimeout(function () {
+                x.className = x.className.replace("show error", "");
+              }, 3000);
             }
           );
         });
