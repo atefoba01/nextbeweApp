@@ -1,3 +1,4 @@
+const CreateJob = require('../collections/createJob')
 const getAllJobs = async(req,res) => {
   try{
     console.log('get jobs')
@@ -8,7 +9,17 @@ const getAllJobs = async(req,res) => {
 
 const createJobs = async(req,res) =>{
   try {
-    console.log('create jobs')
+    const {jobRole,jobDescription,jobResponsibilitys,skills,weAreLookingFor,additionalDetails} = req.body;
+    const jobs = new CreateJob({
+      jobRole,
+      jobDescription,
+      jobResponsibilitys,
+      skills,
+      weAreLookingFor,
+      additionalDetails
+    })
+    await jobs.save()
+    res.status(200).json({msg:"Created Successfully"})
   } catch (error) {
     console.log(error)
   }
