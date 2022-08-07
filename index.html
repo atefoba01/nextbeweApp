@@ -308,7 +308,7 @@
     <script src="components/clients.js"></script>
     <script type="text/javascript">
       (function () {
-        emailjs.init("YOUR_USER_ID");
+        emailjs.init("_rTjO_azkpxbNM5vI");
       })();
 
       document
@@ -316,7 +316,7 @@
         .addEventListener("submit", function (event) {
           event.preventDefault();
           // send the email here
-          emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(
+          emailjs.sendForm("service_63vnsdh", "template_iktvgv8", this).then(
             (response) => {
               var x = document.getElementById("snackbar");
               x.className = "show sucess";
