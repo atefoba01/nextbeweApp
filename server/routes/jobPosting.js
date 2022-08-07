@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const {getAllJobs,
-  createJobs} = require('../controllers/jobs')
+  createJobs,getSingleJob} = require('../controllers/jobs')
 
 
 router.get('/jobpostings',getAllJobs)
+router.get('/singlejob',getSingleJob)
 router.post('/createjob', createJobs)
 
 module.exports = router;
