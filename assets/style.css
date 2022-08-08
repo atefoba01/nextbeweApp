@@ -21,15 +21,13 @@
   background: rgba(0, 0, 0, .2);
 } */
 
-
 html,
 body {
   margin: 0px;
   padding: 0px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
 }
-
 
 .bg {
   background-image: url(images/slider/2637.png);
@@ -55,9 +53,9 @@ body {
 .custom li:before {
   margin-right: 25px;
   content: counter(item);
-  color: #32CD32;
+  color: #32cd32;
   font-size: 40px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 600;
 }
@@ -80,13 +78,12 @@ body {
   margin-right: 15px;
   margin-top: -7px;
   content: counter(item);
-  color: #32CD32;
+  color: #32cd32;
   font-size: 25px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 600;
 }
-
 
 .mt-60 {
   margin-top: 60px;
@@ -100,19 +97,19 @@ body {
 
 @media only screen and (max-width: 1200px) {
   .bg {
-    background-position: calc(100% + 145px)
+    background-position: calc(100% + 145px);
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .bg {
-    background-position: calc(100% + 190px)
+    background-position: calc(100% + 190px);
   }
 }
 
 @media only screen and (max-width: 815px) {
   .bg {
-    background-position: calc(100% - 0px)
+    background-position: calc(100% - 0px);
   }
 }
 
@@ -120,7 +117,7 @@ body {
 
 @media only screen and (max-width: 425px) {
   .bg {
-    background-position: calc(100% + 145px)
+    background-position: calc(100% + 145px);
   }
 }
 
@@ -136,7 +133,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
 }
 
 .social-icon {
@@ -169,28 +166,28 @@ body {
 }
 
 .header-title h1 {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
 }
 
 .header-title h3 {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
 }
 
 .header-title h6 {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
 }
 
 .title {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -202,7 +199,7 @@ body {
 }
 
 .text-color {
-  color: #064DAA;
+  color: #064daa;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -238,7 +235,7 @@ body {
 }
 
 .box {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   width: calc(33.33% - 40px);
@@ -253,16 +250,16 @@ body {
 }
 
 .box h3 {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  color: #064DAA;
+  color: #064daa;
   margin: 10px 0px;
 }
 
 .box p {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -286,7 +283,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 
 @media only screen and (max-width: 1024px) {
   .box {
@@ -333,7 +329,7 @@ body {
 }
 
 .form-label {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -347,17 +343,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  color: #064DAA;
-  border: 1px solid #064DAA;
+  color: #064daa;
+  border: 1px solid #064daa;
   border-radius: 4px;
   background: #fff;
   height: 35px;
   width: 150px;
-  ;
 }
 
 .career {
@@ -366,7 +361,7 @@ body {
   flex-direction: row;
   margin: 0px 20px;
 
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -385,7 +380,7 @@ body {
 }
 
 .career .title {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
@@ -394,7 +389,7 @@ body {
 
 .career img {
   width: calc(100% - 10px);
-  height: calc((100vh - 146px)/2);
+  height: calc((100vh - 146px) / 2);
   object-fit: cover;
   margin: 5px;
 }
@@ -438,39 +433,37 @@ body {
 }
 
 .quote {
-  background: #E5F1FF;
+  background: #e5f1ff;
   border-radius: 4px;
   padding: 5px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  color: #064DAA;
+  color: #064daa;
 }
 
 .faq {
-  background: #E5F1FF;
+  background: #e5f1ff;
   border-radius: 4px;
   padding: 20px;
 }
 
 .faq .title {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  color: #064DAA;
+  color: #064daa;
 }
 
 .faq .content {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   color: #040404;
   margin-top: 15px;
 }
-
-
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
@@ -483,7 +476,7 @@ body {
   padding: 16px; /* Padding */
   position: fixed; /* Sit on top of the screen */
   z-index: 1; /* Add a z-index if needed */
-  right: 30px; 
+  right: 30px;
   margin-left: 30px;
   bottom: 30px; /* 30px from the bottom */
 }
@@ -509,21 +502,92 @@ body {
 
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 
 @keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 815px) {
+  .modal-content {
+    width: 80%; 
+  }
 }
