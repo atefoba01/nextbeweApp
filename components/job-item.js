@@ -72,7 +72,7 @@ customElements.define("job-item", JobItem);
 function navigate(elem) {
   const shadow = elem.shadowRoot;
   const click = shadow?.querySelector("#click");
-  console.log(shadow?.querySelector("#click"));
+  // console.log(shadow?.querySelector("#click"));
   click.addEventListener("click", (_event) => {
     window.location = "career-details.html?id=" + click.getAttribute("data-id");
   });
@@ -86,10 +86,10 @@ window.onload = async (_event) => {
     method: "GET",
   };
 
-  await fetch("http://localhost:3000/api/jobpostings", requestOptions)
+  await fetch("https://api.nextbewe.com/api/jobpostings", requestOptions)
     .then((response) => response.json())
     .then((result) => {
-      console.log(result);
+      // console.log(result);
       if (result?.data) {
         let careerContent = "";
         result?.data.forEach((element) => {

@@ -75,7 +75,7 @@
             body: JSON.stringify(data),
           };
 
-          await fetch("http://localhost:3000/api/createjob", requestOptions)
+          await fetch("https://api.nextbewe.com/api/createjob", requestOptions)
             .then((result) => {
               var x = document.getElementById("snackbar");
               x.className = "show sucess";

@@ -94,7 +94,7 @@ window.onload = async (_event) => {
     method: "GET",
   };
 
-  await fetch("http://localhost:3000/api/singlejob?postId=" + getUrlParameter('id'), requestOptions)
+  await fetch("https://api.nextbewe.com/api/singlejob?postId=" + getUrlParameter('id'), requestOptions)
     .then((response) => response.json())
     .then((result) => {
       if (result?.data) {
