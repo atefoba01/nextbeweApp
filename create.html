@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <title>NextBewe</title>
+  </head>
+
+  <body>
+    <nav-bar active="career"></nav-bar>
+    <div class="contain">
+      <form id="myForm">
+        <div class="form-control">
+          <label class="form-label">Job title:</label>
+          <input required type="text" class="form-input" name="jobRole" />
+        </div>
+        <div class="form-control">
+          <label class="form-label">Job description:</label>
+          <textarea
+            id="editor"
+            required
+            type="email"
+            class="form-input ckeditor"
+            name="jobDescription"
+          ></textarea>
+        </div>
+        <div class="form-control">
+          <input type="submit" class="btn" value="Submit" id="formSubmit" />
+        </div>
+      </form>
+    </div>
+
+    <div id="snackbar"></div>
+
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
+    <script src="components/app.js"></script>
+    <script src="components/nav-bar.js"></script>
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+          document.getElementById("formSubmit").disabled = true;
+           document.getElementById("formSubmit").value = 'pending...';
+          const formData = new FormData(event.target);
+          const data = Array.from(formData.entries()).reduce(
+            (memo, [key, value]) => ({
+              ...memo,
+              [key]: value,
+            }),
+            {}
+          );
+
+          data.jobDescription = CKEDITOR.instances.editor.getData();
+
+          const myHeaders = new Headers();
+          myHeaders.append("Content-Type", "application/json");
+
+          const requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: JSON.stringify(data),
+          };
+
+          await fetch("http://localhost:3000/api/createjob", requestOptions)
+            .then((result) => {
+              console.log(result);
+              var x = document.getElementById("snackbar");
+              x.className = "show sucess";
+              x.innerHTML = 'Job Created Successfully';
+              setTimeout(function () {
+                x.className = x.className.replace("show sucess", "");
+              }, 3000);
+              document.getElementById("formSubmit").disabled = false;
+               document.getElementById("formSubmit").value = 'Submit';
+            })
+            .catch((error) => {
+              var x = document.getElementById("snackbar");
+              x.innerHTML = 'Some thing went wrong. Please try again.';
+              x.className = "show error";
+              setTimeout(function () {
+                x.className = x.className.replace("show error", "");
+              }, 3000);
+              document.getElementById("formSubmit").disabled = false;
+               document.getElementById("formSubmit").value = 'Submit';
+            });
+        });
+    </script>
+  </body>
+</html>
