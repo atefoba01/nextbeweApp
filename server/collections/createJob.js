@@ -12,11 +12,9 @@ let createJob = new Schema({
   },
   jobResponsibilitys:{
     type: String,
-    required: true
   },
   skills:{
     type: String,
-    required: true
   },
   weAreLookingFor:{
     type: String
