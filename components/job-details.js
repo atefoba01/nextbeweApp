@@ -73,7 +73,7 @@ span.onclick = function() {
 function navigate(elem) {
   const shadow = elem.shadowRoot;
   const click = shadow?.querySelector("#click");
-  console.log(shadow?.querySelector("#click"));
+
   click.addEventListener("click", (_event) => {
     modal.style.display = "block";
   });
@@ -97,7 +97,6 @@ window.onload = async (_event) => {
   await fetch("http://localhost:3000/api/singlejob?postId=" + getUrlParameter('id'), requestOptions)
     .then((response) => response.json())
     .then((result) => {
-      console.log(result);
       if (result?.data) {
         const element = result?.data;
         let careerContent = "";
@@ -114,7 +113,6 @@ window.onload = async (_event) => {
       }
     })
     .catch((error) => {
-      console.log(error);
       document.querySelector(
         "#career-details"
       ).innerHTML = `<h1 class="title text-center">Unable to fetch...</h1>`;
