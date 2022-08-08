@@ -11,7 +11,7 @@ const getAllJobs = async(req,res) => {
 
 const getSingleJob = async(req,res) => {
   try{
-    const {postId} = req.body;
+    const {postId} = req.query;
     const getSinglePost = await CreateJob.findOne({_id: postId})
     if(!getSinglePost){
       res.status(400).json({msg:"Unable to find the post with this is"})
