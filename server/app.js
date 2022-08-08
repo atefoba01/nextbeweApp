@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors')
 const app = express();
 const routes = require('./routes/jobPosting')
-const port = process.env.port || 6000;
+const port = process.env.port || 3000;
 
 require('./db');
 
