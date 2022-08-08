@@ -315,6 +315,8 @@
         .getElementById("myForm")
         .addEventListener("submit", function (event) {
           event.preventDefault();
+          document.getElementById("formSubmit").disabled = true;
+           document.getElementById("formSubmit").value = 'pending...';
           // send the email here
           emailjs.sendForm("service_63vnsdh", "template_iktvgv8", this).then(
             (response) => {
@@ -324,6 +326,8 @@
               setTimeout(function () {
                 x.className = x.className.replace("show sucess", "");
               }, 3000);
+              document.getElementById("formSubmit").disabled = false;
+               document.getElementById("formSubmit").value = 'Submit';
             },
             (error) => {
               var x = document.getElementById("snackbar");
@@ -332,6 +336,8 @@
               setTimeout(function () {
                 x.className = x.className.replace("show error", "");
               }, 3000);
+              document.getElementById("formSubmit").disabled = false;
+               document.getElementById("formSubmit").value = 'Submit';
             }
           );
         });
