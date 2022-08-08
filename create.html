@@ -77,7 +77,6 @@
 
           await fetch("http://localhost:3000/api/createjob", requestOptions)
             .then((result) => {
-              console.log(result);
               var x = document.getElementById("snackbar");
               x.className = "show sucess";
               x.innerHTML = 'Job Created Successfully';
