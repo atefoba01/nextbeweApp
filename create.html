@@ -42,12 +42,70 @@
       </form>
     </div>
 
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <!-- <span class="close">&times;</span> -->
+          <form id="myForm1">
+            <div class="form-control">
+              <label class="form-label">Username:</label>
+              <input required type="text" class="form-input" name="username" />
+            </div>
+            <div class="form-control">
+              <label class="form-label">Password:</label>
+              <input required type="password" class="form-input" name="password" />
+            </div>
+            <div class="form-control">
+              <input type="submit" class="btn" value="Submit" id="formSubmit1" />
+            </div>
+          </form>
+        </div>
+      </div>
+
     <div id="snackbar"></div>
 
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
     <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
     <script src="components/app.js"></script>
     <script src="components/nav-bar.js"></script>
+    <script>
+      const modal = document.getElementById("myModal");
+      modal.style.display = "block";
+      document
+        .getElementById("myForm1")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+          document.getElementById("formSubmit1").disabled = true;
+           document.getElementById("formSubmit1").value = 'pending...';
+          const formData = new FormData(event.target);
+          const data = Array.from(formData.entries()).reduce(
+            (memo, [key, value]) => ({
+              ...memo,
+              [key]: value,
+            }),
+            {}
+          );
+
+          if(data.username === 'info@nextbewe.com' && data.password === 'Hiring@123PostCreation') {
+            document.getElementById("formSubmit1").disabled = false;
+            document.getElementById("formSubmit1").value = 'Submit';
+            modal.style.display = "none";
+          } else {
+            document.getElementById("formSubmit1").disabled = false;
+            document.getElementById("formSubmit1").value = 'Submit';
+            var x = document.getElementById("snackbar");
+              x.innerHTML = 'username/password invalid';
+              x.className = "show error";
+              setTimeout(function () {
+                x.className = x.className.replace("show error", "");
+              }, 3000);
+          }
+        });
+    </script>
+
+
     <script>
       document
         .getElementById("myForm")
