@@ -97,7 +97,7 @@ window.onload = async (_event) => {
           <job-item 
               id="${element._id}"
               title="${element.jobRole}"
-              content="${element.jobDescription}"
+              content="${element.jobDescription?.replace( /(<([^>]+)>)/ig, ' * ')}"
           ></job-item>`;
         });
 
