@@ -21,7 +21,6 @@ clientTemplate.innerHTML = `
   }
   </style>
     <div class="roles">
-        <img src="assets/images/clients/1.png" alt="" />
         <img src="assets/images/clients/2.png" alt="" />
         <img src="assets/images/clients/3.png" alt="" />
         <img src="assets/images/clients/4.png" alt="" />
